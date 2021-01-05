@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { UserListComponent } from "./user-list/user-list.component";
 import { RouterModule } from "@angular/router";
+import { APP_ROUTES } from "./app.routing";
 
 @NgModule({
   imports: [
