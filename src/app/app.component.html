@@ -1,5 +1,3 @@
-<div class="container d-flex flex-column flex-justify-content-center flex-align-items-center"
-	style="padding-top: 200px;">
-	<input type="text" [(ngModel)]="search">
-	<app-user-list [names]="names$ | async" [search]="search"></app-user-list>
+<div class="container d-flex flex-column" style="padding-top: 100px;">
+	<router-outlet></router-outlet>
 </div>
