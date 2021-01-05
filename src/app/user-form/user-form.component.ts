@@ -9,7 +9,7 @@ import { User } from "../user.interface";
   styleUrls: ["./user-form.component.scss"]
 })
 export class UserFormComponent implements OnInit {
-  public form: FormGroup;
+  public userForm: FormGroup;
   public user: User;
 
   constructor(
@@ -24,13 +24,13 @@ export class UserFormComponent implements OnInit {
   }
 
   initForm(user = { username: null, age: null }) {
-    this.form = this.fb.group({
+    this.userForm = this.fb.group({
       username: [user.username],
       age: [user.age]
     });
   }
 
   submit() {
-    console.log(this.form.value);
+    console.log(this.userForm.value);
   }
 }
