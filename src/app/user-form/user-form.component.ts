@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup } from "@angular/forms";
+import { ActivatedRoute, ParamMap } from "@angular/router";
 
 @Component({
   selector: "app-user-form",
@@ -6,7 +8,28 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./user-form.component.scss"]
 })
 export class UserFormComponent implements OnInit {
-  constructor() {}
+  public form: FormGroup;
+  public user;
 
-  ngOnInit() {}
+  constructor(
+    private fb: FormBuilder,
+    private activatedRoute: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
+      this.initForm();
+    });
+  }
+
+  initForm(user = { username: null, age: null }) {
+    this.form = this.fb.group({
+      username: [user.username],
+      age: [user.age]
+    });
+  }
+
+  submit() {
+    console.log(this.form.value);
+  }
 }
