@@ -5,6 +5,7 @@ import { AppComponent } from "./app.component";
 import { UserListComponent } from "./user-list/user-list.component";
 import { RouterModule } from "@angular/router";
 import { APP_ROUTES } from "./app.routing";
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { APP_ROUTES } from "./app.routing";
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
-  declarations: [AppComponent, UserListComponent],
+  declarations: [AppComponent, UserListComponent, UserFormComponent],
   bootstrap: [AppComponent],
   providers: []
 })
