@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { ActivatedRoute, ParamMap } from "@angular/router";
+import { User } from "../user.interface";
 
 @Component({
   selector: "app-user-form",
@@ -9,7 +10,7 @@ import { ActivatedRoute, ParamMap } from "@angular/router";
 })
 export class UserFormComponent implements OnInit {
   public form: FormGroup;
-  public user;
+  public user: User;
 
   constructor(
     private fb: FormBuilder,
