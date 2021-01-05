@@ -1,11 +1,17 @@
-import { LOCALE_ID, NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { UserListComponent } from "./user-list/user-list.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(APP_ROUTES)
+  ],
   declarations: [AppComponent, UserListComponent],
   bootstrap: [AppComponent],
   providers: []
