@@ -1,3 +1,4 @@
-<ul>
-	<li *ngFor="let name of names | filter:search">{{name}}</li>
+<button class="btn btn-primary" routerLink="new">Ajouter un utilisateur</button>
+<ul class="list-primary list-action">
+	<li [routerLink]="[user._id, 'edit']" *ngFor="let user of users">{{user.username</li>
 </ul>
